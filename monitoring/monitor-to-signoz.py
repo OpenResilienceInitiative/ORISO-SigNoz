@@ -3,6 +3,7 @@ import requests
 import time
 import json
 from datetime import datetime
+from sentry_setup import capture_monitor_exception, init_sentry
 from opentelemetry import trace, metrics
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.metrics import MeterProvider
@@ -11,6 +12,8 @@ from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExport
 from opentelemetry.exporter.otlp.proto.grpc.metric_exporter import OTLPMetricExporter
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
 from opentelemetry.sdk.metrics.export import PeriodicExportingMetricReader
+
+init_sentry("monitor-to-signoz")
 
 # Configure OpenTelemetry
 resource = Resource.create({"service.name": "caritas-health-monitor"})
@@ -73,6 +76,7 @@ def check_service(name, config):
             span.set_attribute("error.message", str(e))
             status_gauge.add(0, {"service": name})
             uptime_counter.add(1, {"service": name, "status": "down"})
+            capture_monitor_exception(e, service={"name": name, "url": config["url"], "port": config["port"]})
             print(f"❌ {name}: {str(e)}")
             return False
 

@@ -5,11 +5,14 @@ Monitors services via health checks and sends metrics to OTEL Collector
 """
 import requests
 import time
+from monitoring.sentry_setup import capture_monitor_exception, init_sentry
 from opentelemetry import metrics
 from opentelemetry.sdk.metrics import MeterProvider
 from opentelemetry.sdk.metrics.export import PeriodicExportingMetricReader
 from opentelemetry.exporter.otlp.proto.grpc.metric_exporter import OTLPMetricExporter
 from opentelemetry.sdk.resources import Resource
+
+init_sentry("service-health-exporter")
 
 # Configure OTEL
 resource = Resource.create({"service.name": "caritas-health-monitor"})
@@ -65,6 +68,7 @@ def check_service(name, config):
             "error": "true"
         }
         service_up.add(0, attributes)
+        capture_monitor_exception(e, service={"name": name, "url": config["url"], "port": config["port"]})
         print(f"✗ {name}: DOWN ({str(e)})")
 
 print("🔍 Caritas Health Monitor for SigNoz")

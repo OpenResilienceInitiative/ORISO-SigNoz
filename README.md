@@ -87,6 +87,24 @@ kubectl port-forward -n platform svc/signoz-frontend 3001:3301
 
 ## Service Monitoring Setup
 
+### Sentry Error Monitoring
+Sentry is optional at runtime and is enabled when `SENTRY_DSN` is set. It captures monitor script exceptions and links them back to this GitHub repo through the configured Sentry code mapping.
+
+**Install Python dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+**Configure environment:**
+```bash
+cp .env.example .env
+export SENTRY_DSN="https://your-dsn@o4511528704933888.ingest.de.sentry.io/4511528766931024"
+export SENTRY_ENVIRONMENT="production"
+export SENTRY_RELEASE="oriso-signoz@$(git rev-parse --short HEAD)"
+```
+
+For systemd, add the same values to the service `Environment=` entries or an `EnvironmentFile=`.
+
 ### Method 1: Health Check Exporter (Current)
 A custom script checks service health endpoints and exports metrics to SignOZ.
 

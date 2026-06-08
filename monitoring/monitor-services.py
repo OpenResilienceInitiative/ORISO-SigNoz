@@ -3,6 +3,9 @@ import requests
 import time
 import json
 from datetime import datetime
+from sentry_setup import capture_monitor_exception, init_sentry
+
+init_sentry("monitor-services")
 
 SERVICES = {
     "tenantservice": "http://localhost:8081/actuator/health",
@@ -26,6 +29,7 @@ def check_service(name, url):
             "response_time_ms": round(duration, 2)
         }
     except Exception as e:
+        capture_monitor_exception(e, service={"name": name, "url": url})
         return {
             "timestamp": datetime.utcnow().isoformat() + "Z",
             "service": name,
