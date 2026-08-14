@@ -1,41 +1,27 @@
 # ORISO SigNoz
 
-This repository keeps ORISO-specific SigNoz notes, helper scripts, and historical
-configuration references for the observability stack.
+This repository contains ORISO-specific supporting material for the observability
+stack.
 
-## Current Ownership
+## Purpose
 
-Runtime deployment and environment-specific configuration are managed from
-[ORISO-Helm](https://github.com/OpenResilienceInitiative/ORISO-Helm). Keep Helm
-values, Kubernetes manifests, and release wiring there so dev, pre-dev, and
-production stay consistent.
+The repository is intended as a lightweight place for SigNoz-related reference
+material, helper scripts, and operational notes that are useful for the ORISO
+platform team.
 
-Use this repository only for SigNoz-specific supporting material that does not
-belong in the platform Helm chart, such as:
-
-- operational notes
-- helper scripts
-- exported or reference configuration
-- migration notes for the SigNoz stack
-
-## Access And Credentials
-
-Do not store live URLs, IP addresses, usernames, passwords, tokens, or Slack
-webhook values in this repository. Use the agreed credential store and the
-current environment runbooks instead.
+Runtime deployment and environment configuration are managed through
+[ORISO-Helm](https://github.com/OpenResilienceInitiative/ORISO-Helm).
 
 ## Repository Contents
 
-- `monitoring/`: legacy/helper monitoring scripts and examples
-- `DEPLOYMENT.md`: historical deployment notes
-- `MONITORING-GUIDE.md`: monitoring reference notes
-- `signoz-values-*.yaml`: historical/reference values files
+- `monitoring/`: helper scripts and monitoring examples
+- `DEPLOYMENT.md`: deployment notes
+- `MONITORING-GUIDE.md`: monitoring notes
+- `signoz-values-*.yaml`: reference values files
 
-Before using any historical file from this repository, compare it with the
-current ORISO-Helm chart and the running environment.
+## Working Guidelines
 
-## Notes
-
-- The correct product spelling is **SigNoz**.
-- Avoid adding environment-specific secrets or one-off server details here.
-- Prefer small updates that keep this repository as a lightweight reference.
+- Keep operational documentation short and current.
+- Keep environment-specific configuration in the Helm chart where possible.
+- Do not commit secrets or personal access details.
+- Prefer small, focused updates that are easy to review.
