@@ -1,0 +1,451 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "ORISO-SigNoz",
+    "languages": [
+      "markdown",
+      "python",
+      "shell",
+      "yaml"
+    ],
+    "frameworks": [],
+    "description": "",
+    "analyzedAt": "2026-08-28T12:38:45.839Z",
+    "gitCommitHash": "95545269aba8d6e12223cf2cd05c24f790ae187a"
+  },
+  "nodes": [
+    {
+      "id": "document:DEPLOYMENT.md",
+      "type": "document",
+      "name": "DEPLOYMENT.md",
+      "filePath": "DEPLOYMENT.md",
+      "summary": "document file with 46 sections (335 lines).",
+      "tags": [
+        "document",
+        "root"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:MONITORING-GUIDE.md",
+      "type": "document",
+      "name": "MONITORING-GUIDE.md",
+      "filePath": "MONITORING-GUIDE.md",
+      "summary": "document file with 26 sections (160 lines).",
+      "tags": [
+        "document",
+        "root"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "document file with 4 sections (28 lines).",
+      "tags": [
+        "document",
+        "root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:ingress.yaml",
+      "type": "config",
+      "name": "ingress.yaml",
+      "filePath": "ingress.yaml",
+      "summary": "config file with 4 sections (28 lines).",
+      "tags": [
+        "config",
+        "root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:monitoring/health-monitor.sh",
+      "type": "file",
+      "name": "health-monitor.sh",
+      "filePath": "monitoring/health-monitor.sh",
+      "summary": "file file (25 lines).",
+      "tags": [
+        "file",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:monitoring/monitor-matrix.sh",
+      "type": "file",
+      "name": "monitor-matrix.sh",
+      "filePath": "monitoring/monitor-matrix.sh",
+      "summary": "file file (57 lines).",
+      "tags": [
+        "file",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:monitoring/monitor-services.py",
+      "type": "file",
+      "name": "monitor-services.py",
+      "filePath": "monitoring/monitor-services.py",
+      "summary": "python source: 1 functions, 0 classes, 4 imports.",
+      "tags": [
+        "python",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:monitoring/monitor-services.py:check_service",
+      "type": "function",
+      "name": "check_service",
+      "filePath": "monitoring/monitor-services.py",
+      "lineRange": [
+        15,
+        36
+      ],
+      "summary": "Function check_service(name, url)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:monitoring/monitor-services.sh",
+      "type": "file",
+      "name": "monitor-services.sh",
+      "filePath": "monitoring/monitor-services.sh",
+      "summary": "file file (88 lines).",
+      "tags": [
+        "file",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:monitoring/monitor-to-signoz.py",
+      "type": "file",
+      "name": "monitor-to-signoz.py",
+      "filePath": "monitoring/monitor-to-signoz.py",
+      "summary": "python source: 1 functions, 0 classes, 12 imports.",
+      "tags": [
+        "python",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:monitoring/monitor-to-signoz.py:check_service",
+      "type": "function",
+      "name": "check_service",
+      "filePath": "monitoring/monitor-to-signoz.py",
+      "lineRange": [
+        49,
+        77
+      ],
+      "summary": "Function check_service(name, config)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:monitoring/service-monitor.sh",
+      "type": "file",
+      "name": "service-monitor.sh",
+      "filePath": "monitoring/service-monitor.sh",
+      "summary": "file file (62 lines).",
+      "tags": [
+        "file",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:service-health-exporter.py",
+      "type": "file",
+      "name": "service-health-exporter.py",
+      "filePath": "service-health-exporter.py",
+      "summary": "python source: 1 functions, 0 classes, 7 imports.",
+      "tags": [
+        "python",
+        "root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:service-health-exporter.py:check_service",
+      "type": "function",
+      "name": "check_service",
+      "filePath": "service-health-exporter.py",
+      "lineRange": [
+        42,
+        68
+      ],
+      "summary": "Function check_service(name, config)",
+      "tags": [],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:signoz-values-backup.yaml",
+      "type": "config",
+      "name": "signoz-values-backup.yaml",
+      "filePath": "signoz-values-backup.yaml",
+      "summary": "config file with 6 sections (26 lines).",
+      "tags": [
+        "config",
+        "root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:signoz-values-current.yaml",
+      "type": "config",
+      "name": "signoz-values-current.yaml",
+      "filePath": "signoz-values-current.yaml",
+      "summary": "config file with 6 sections (26 lines).",
+      "tags": [
+        "config",
+        "root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:signoz-values-original.yaml",
+      "type": "config",
+      "name": "signoz-values-original.yaml",
+      "filePath": "signoz-values-original.yaml",
+      "summary": "config file with 5 sections (30 lines).",
+      "tags": [
+        "config",
+        "root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:start-signoz-access.sh",
+      "type": "file",
+      "name": "start-signoz-access.sh",
+      "filePath": "start-signoz-access.sh",
+      "summary": "file file (6 lines).",
+      "tags": [
+        "file",
+        "root"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "concept:observability-stack",
+      "type": "concept",
+      "name": "SigNoz Observability Stack",
+      "summary": "Deployment configuration for the SigNoz observability stack (Helm values in three revisions: original, current, backup) plus the ingress that exposes it. Pure configuration repo — the SigNoz software itself is upstream.",
+      "tags": [
+        "domain",
+        "observability",
+        "configuration",
+        "enriched"
+      ],
+      "complexity": "moderate",
+      "metadata": {
+        "enrichment": "a-lite-2026-07",
+        "generatedBy": "claude-operator-coarse-pass"
+      }
+    },
+    {
+      "id": "concept:service-monitors",
+      "type": "concept",
+      "name": "Service Monitors",
+      "summary": "Monitoring scripts that feed SigNoz: monitor-services.py / monitor-to-signoz.py push service states, monitor-matrix.sh watches the Matrix stack, service-health-exporter.py exposes health metrics.",
+      "tags": [
+        "monitoring",
+        "enriched"
+      ],
+      "complexity": "moderate",
+      "metadata": {
+        "enrichment": "a-lite-2026-07",
+        "generatedBy": "claude-operator-coarse-pass"
+      }
+    },
+    {
+      "id": "flow:metrics-ingest",
+      "type": "flow",
+      "name": "Metrics Ingestion",
+      "summary": "Monitor scripts probe the platform services → monitor-to-signoz.py forwards results into SigNoz → dashboards and alerts run on the ingested data.",
+      "tags": [
+        "enriched"
+      ],
+      "complexity": "moderate",
+      "metadata": {
+        "enrichment": "a-lite-2026-07",
+        "generatedBy": "claude-operator-coarse-pass"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:monitoring/monitor-services.py",
+      "target": "function:monitoring/monitor-services.py:check_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:monitoring/monitor-to-signoz.py",
+      "target": "function:monitoring/monitor-to-signoz.py:check_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:service-health-exporter.py",
+      "target": "function:service-health-exporter.py:check_service",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "concept:observability-stack",
+      "target": "config:signoz-values-current.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:observability-stack",
+      "target": "config:signoz-values-original.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:observability-stack",
+      "target": "config:ingress.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:observability-stack",
+      "target": "document:DEPLOYMENT.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:service-monitors",
+      "target": "file:monitoring/monitor-services.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:service-monitors",
+      "target": "file:monitoring/monitor-to-signoz.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:service-monitors",
+      "target": "file:monitoring/monitor-matrix.sh",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:service-monitors",
+      "target": "file:service-health-exporter.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "concept:service-monitors",
+      "target": "document:MONITORING-GUIDE.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:metrics-ingest",
+      "target": "file:monitoring/monitor-services.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:metrics-ingest",
+      "target": "file:monitoring/monitor-to-signoz.py",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:metrics-ingest",
+      "target": "config:signoz-values-current.yaml",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:domain-concepts",
+      "name": "Domain Concepts",
+      "description": "High-level domain concepts and flows (coarse enrichment pass).",
+      "nodeIds": [
+        "concept:observability-stack",
+        "concept:service-monitors",
+        "flow:metrics-ingest"
+      ]
+    },
+    {
+      "id": "layer:core",
+      "name": "Core",
+      "description": "Core application files",
+      "nodeIds": [
+        "file:monitoring/health-monitor.sh",
+        "file:monitoring/monitor-matrix.sh",
+        "file:monitoring/monitor-services.py",
+        "file:monitoring/monitor-services.sh",
+        "file:monitoring/monitor-to-signoz.py",
+        "file:monitoring/service-monitor.sh",
+        "file:service-health-exporter.py",
+        "file:start-signoz-access.sh"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Core",
+      "description": "Core application files. Key files: health-monitor.sh, monitor-matrix.sh, monitor-services.py, monitor-services.sh, monitor-to-signoz.py, service-monitor.sh, service-health-exporter.py, start-signoz-access.sh.",
+      "nodeIds": [
+        "file:monitoring/health-monitor.sh",
+        "file:monitoring/monitor-matrix.sh",
+        "file:monitoring/monitor-services.py",
+        "file:monitoring/monitor-services.sh",
+        "file:monitoring/monitor-to-signoz.py",
+        "file:monitoring/service-monitor.sh",
+        "file:service-health-exporter.py",
+        "file:start-signoz-access.sh"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Supporting Components",
+      "description": "Additional supporting files: DEPLOYMENT.md, MONITORING-GUIDE.md, README.md, ingress.yaml, signoz-values-backup.yaml, signoz-values-current.yaml, signoz-values-original.yaml, check_service, check_service, check_service.",
+      "nodeIds": [
+        "document:DEPLOYMENT.md",
+        "document:MONITORING-GUIDE.md",
+        "document:README.md",
+        "config:ingress.yaml",
+        "config:signoz-values-backup.yaml",
+        "config:signoz-values-current.yaml",
+        "config:signoz-values-original.yaml",
+        "function:monitoring/monitor-services.py:check_service",
+        "function:monitoring/monitor-to-signoz.py:check_service",
+        "function:service-health-exporter.py:check_service"
+      ]
+    }
+  ]
+}
