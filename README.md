@@ -15,8 +15,6 @@ Runtime deployment and environment configuration are managed through
 ## Repository Contents
 
 - `monitoring/`: helper scripts and monitoring examples
-- `DEPLOYMENT.md`: deployment notes
-- `MONITORING-GUIDE.md`: monitoring notes
 - `signoz-values-*.yaml`: reference values files
 
 ## Working Guidelines
